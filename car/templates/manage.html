@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h3>Car Details</h3>
+<table>
+   <table class="table">
+       <thead>
+           <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Model</th>
+           </tr>
+       </thead>
+       <tbody>
+        {% for car in cars %}
+            <tr>
+               <td scope="row">{{car.id}}</td>
+               <td scope="row">{{car.name}}</td>
+               <td scope="row">{{car.car_type}}</td>
+               <td scope="row">{{car.hire_price}}</td>
+               
+               <td><a href="/update/{{car.id}}">Update Info</a></td>
+               <td><a href="/delete/{{car.id}}">Delete</a></td>
+           </tr>
+        {% endfor %}
+        
+         
+       </tbody>
+   </table>
+
+</table>
+{% endblock body %}

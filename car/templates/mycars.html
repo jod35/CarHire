@@ -1,0 +1,31 @@
+{% extends 'layout.html'%} 
+
+{% block body %}
+{% with messages =get_flashed_messages()%}
+{% if messages %}
+ {% for message in messages %}
+    <div class="flash">
+      <p>{{message}}</p>
+    </div>
+ {% endfor %}
+{% endif %}
+{% endwith %}
+<div class="tab">
+<form action="/cars" method="POST">
+    <div class="form">
+        <h2>Add Car To Sale</h2>
+        <p>Name</p>
+        <input type="text" name="name" id="name" />
+        <p>Type</p>
+        <input type="text" name="type" id="type" />
+        <p>Price in UGX</p>
+        <input type="text" name="price" id="price" />
+        <p>Image URL</p>
+        <input type="text" name="image_url" id="image_url" />
+        <br /><br />
+    
+        <input type="submit" value="Add Car" />
+      </div>
+</form>
+</div>
+{% endblock body %}

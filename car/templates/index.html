@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="main">
+   <div class="cars">
+    {% for car in cars %}
+       <div class="car">
+        <img src="{{car.image_url}}" alt="car" width="100" height="100">
+        <p>{{car.name}}</p>
+        {% if current_user.is_authenticated%}
+         {%else%}
+         <a href="" class="button">Hire Car</a>
+        {% endif %}
+        
+     
+       </div>
+    
+    {% endfor %}
+    </div>
+    <div class="other">
+        <p class="others">"We take pride in making you drive your dreams. Hire your car right now !!!"</p>
+    </div>
+</div>
+{% endblock body %}

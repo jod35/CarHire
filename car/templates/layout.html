@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='n.css')}}" />
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}"> -->
+
+    <title>
+      {% if title %} Fast car Hire|{{ title }}
+      {% else %} Fast Car Hire {% endif %}
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico|Squada+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Fast Car Hire</h1>
+        <div class="links">
+          {% if current_user.is_authenticated %}
+          <a href="/logout">Logout</a>
+          {% else %}
+          <a href="/signup">Sign Up</a>
+          <a href="/login">Login</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <nav>
+        {% if current_user.is_authenticated %}
+        <a href="/">Cars on Hire</a>
+        <a href="/cars">Add a Car</a>
+        <a href="/manage">Manage Stock</a>
+         {% else %}
+           <a href="/">Home</a>
+        <a href="">About</a>
+        <a href="">Contacts</a>
+        {% endif %}
+      </nav>
+    </header>
+    {% block body %} {% endblock body %}
+    <footer>
+      <p>&copy; Fast Car Hire</p>
+    </footer>
+  </body>
+</html>

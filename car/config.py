@@ -1,0 +1,4 @@
+class DevConfig():
+    SQLALCHEMY_DATABASE_URI='sqlite:///cars.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS=False
+    SECRET_KEY='23e8062926ad575d4ac68fb9'

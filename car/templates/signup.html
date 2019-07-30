@@ -1,0 +1,26 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" />
+
+<div class="form">
+  {% with messages = get_flashed_messages()%} {% if messages %} {% for message
+  in messages %}
+  <div class="flash">
+    <h2>{{ message }}</h2>
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+  <form action="/signup" method="POST">
+    <h2>Join To Become A Vendor</h2>
+    <p>Name</p>
+    <input type="text" name="name" id="name" />
+    <p>Email</p>
+    <input type="text" name="email" id="email" />
+    <p>Password</p>
+    <input type="password" name="password" id="password" />
+    <p>Confirm Password</p>
+    <input type="password" name="confirm" id="confirm" />
+    <br />
+    <br />
+    <input type="submit" value="Sign Up" />
+  </form>
+</div>
+{% endblock body %}

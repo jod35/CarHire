@@ -1,0 +1,121 @@
+body{
+  font-family: sans-serif;
+  
+}
+header{
+  background-color:aqua;
+}
+header h1{
+margin: 0; 
+font-family: 'Squada One';
+color:darkcyan;
+}
+.links{
+  text-align: end;
+  padding: 30px;
+  margin-top: 0;
+}
+.links a{
+  color:darkcyan;
+  text-decoration: none;
+}
+nav{
+  text-align: center;
+  padding: 20px;
+  background-color:aquamarine;
+ 
+  
+}
+
+nav a{
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+  color: darkcyan;
+}
+nav a:hover{
+  color: white;
+  background-color: darkcyan;
+}
+.main{
+  display: flex;
+  margin: 30px;
+}
+.cars{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+
+}
+.car{
+  width: 200px;
+}
+.other p{
+  font-size: 50px;
+  color: 
+}
+.other{
+  
+  color: darkcyan;
+}
+.form{
+  text-align: center;
+  color: darkcyan;
+  width: 400px;
+  margin-left: 450px;
+  background-color: aqua;
+  border-radius: 10px;
+}
+footer{
+  text-align: center;
+  background-color: aquamarine;
+  color: darkcyan;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  font-size: 25px;
+}
+.car{
+  color: darkcyan;
+  
+  text-align: center;
+  width: 150px;
+  height: 250px;
+}
+.flash{
+  color: darkcyan;
+  text-align: center;
+  font-weight: bolder;
+}
+.car a {
+color:white;
+text-decoration: none;
+background-color:cadetblue;
+font-size: 25px;
+border-radius: 5px;
+margin: 25px;
+}
+table{
+text-align: center;
+font-size: 20px;
+
+}
+th{
+  width: 200px;
+  background-color: darkcyan;
+  color: white;
+  
+}
+h3{
+  color: darkcyan;
+
+}
+td{
+  color: darkcyan;
+}
+td a{
+  color: white;
+  background-color: darkcyan;
+  text-decoration: none;
+  padding: 5px;
+}

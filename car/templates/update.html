@@ -1,0 +1,24 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+
+
+    <form action="/update/{{car.id}}" method="POST">
+    <div class="form">
+        <h2>Update Details</h2>
+        <p>Name</p>
+        <input type="text" name="name" id="name" value="{{car.name}}"/>
+        <p>Type</p>
+        <input type="text" name="type" id="type" value="{{car.car_type}}"/>
+        <p>Price in UGX</p>
+        <input type="text" name="price" id="price" value="{{car.hire_price}}"/>
+        <p>Image URL</p>
+        <input type="text" name="image_url" id="image_url" value="{{car.image_url}}"/>
+        <br /><br />
+    
+        <input type="submit" value="Update" />
+      </div>
+</form>
+
+
+{% endblock body %}
